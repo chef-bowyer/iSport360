@@ -1,0 +1,100 @@
+{% load staticfiles %}
+<head>
+    <title> iSport360 </title>
+    <link rel="stylesheet" type="text/css" href="{% static 'userCollector/landingPage.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.css' %}" />
+    <link href='http://fonts.googleapis.com/css?family=Gruppo' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div id="iSport360-front">
+    <img src="{% static 'userCollector/logo.png' %}" id="logo">
+    <img src="{% static 'userCollector/down.gif' %}" id="down">
+  </div>
+
+  <div id="content-border"></div>
+
+  <div id="intro-info">
+    <h1><b>JOIN OUR CRUSADE</b></h1>
+    <h4>
+      We are on a crusade to make the youth sports experience better for coaches, parents and MOST IMPORTANTLY, our kids (worth mentioning that we are parents and coaches too).
+      <br><br>  ​
+      Did you know that about 1 in 1,000 kids earns a college sports scholarship yet nearly half of parents think their kids have scholarship potential?
+    </h4>
+    <h3>
+      No wonder it’s like a pressure cooker on the sidelines and in the bleachers!<br>
+    ​</h3>
+    <h4>
+      So we are building technology for your mobile device to help coaches and parents communicate in a better way and create a better sports experience for our kids.
+    ​</h4>
+
+    <form method="get" action="/#userCollector">
+      <h2>
+      <button type="submit">JOIN NOW</button>
+    </form>
+
+    <h1> WE CAN HELP </h1>
+    <h4> Our mobile technology platform is secure and private </h4>
+  </div>
+
+  <div id="bullet-points">
+
+    <div class='bullet'>
+      <img src= "{% static 'balls/Basketball.gif'%}" class='bullet-icon'>
+      <div class="bullet-description">Our objective age- and gender-specific standards, developed by experts, will align coaches and parents expectations and goals from the beginning of the season.</div>
+    </div>
+
+    <div class='bullet'>
+      <img src= "{% static 'balls/Basketball.gif'%}" class='bullet-icon'>
+      <div class="bullet-description">Our fair assessment tools will help coaches and parents objectively assess their kids performance and help improve their development.</div>
+    ​</div>
+
+    <div class='bullet'>
+      <img src= "{% static 'balls/Basketball.gif'%}" class='bullet-icon'>
+      <div class="bullet-description">Our communciation tool will create a quality feedback loop between parents and coaches to make sure kids are having fun and learning.​</div>
+    </div>
+
+    <div class='bullet'>
+      <img src= "{% static 'balls/Basketball.gif'%}" class='bullet-icon'>
+      <div class="bullet-description">Our tryout tools will bring objectivity and fairness to a relatively chaotic and painful experience for coaches, parents and kids.​</div>
+    </div>
+  </div>
+
+  <h1>JOIN NOW</h1>
+  <h3> to become a beta-tester and keep informed about our crusade to rescue the youth sports experience.</h3>
+
+  <form action="{% url 'index' %}" method="post" id="userCollector">
+    {%csrf_token%}
+    <tr><th><label for="id_first_name">First name:</label></th><td><input id="id_first_name" maxlength="32" name="first_name" type="text" /></td></tr>
+    <tr><th><label for="id_last_name">Last name:</label></th><td><input id="id_last_name" maxlength="32" name="last_name" type="text" /></td></tr>
+    <tr><th><label for="id_email">Email:</label></th><td><input id="id_email" maxlength="254" name="email" type="email" /></td></tr>
+    <tr><th><label for="id_city">City:</label></th><td><input id="id_city" maxlength="32" name="city" type="text" /></td></tr>
+    <tr><th><label for="id_state">State:</label></th><td><input id="id_state" maxlength="2" name="state" type="text" /></td></tr>
+    <tr><th><label for="id_coach">Coach:</label></th><td><input id="id_coach" name="coach" type="checkbox" /></td></tr>
+    <tr><th><label for="id_parent">Parent:</label></th><td><input id="id_parent" name="parent" type="checkbox" /></td></tr>
+    <tr><th><label for="id_soccer">Soccer:</label></th><td><input id="id_soccer" name="soccer" type="checkbox" /></td></tr>
+    <tr><th><label for="id_baseball">Baseball:</label></th><td><input id="id_baseball" name="baseball" type="checkbox" /></td></tr>
+    <tr><th><label for="id_softball">Softball:</label></th><td><input id="id_softball" name="softball" type="checkbox" /></td></tr>
+    <tr><th><label for="id_lacrosse">Lacrosse:</label></th><td><input id="id_lacrosse" name="lacrosse" type="checkbox" /></td></tr>
+    <tr><th><label for="id_basketball">Basketball:</label></th><td><input id="id_basketball" name="basketball" type="checkbox" /></td></tr>
+    <tr><th><label for="id_volleyball">Volleyball:</label></th><td><input id="id_volleyball" name="volleyball" type="checkbox" /></td></tr>
+    <tr><th><label for="id_football">Football:</label></th><td><input id="id_football" name="football" type="checkbox" /></td></tr>
+    <tr><th><label for="id_golf">Golf:</label></th><td><input id="id_golf" name="golf" type="checkbox" /></td></tr>
+    <tr><th><label for="id_tennis">Tennis:</label></th><td><input id="id_tennis" name="tennis" type="checkbox" /></td></tr>
+    <tr><th><label for="id_ice_skating">Ice skating:</label></th><td><input id="id_ice_skating" name="ice_skating" type="checkbox" /></td></tr>
+    <tr><th><label for="id_swimming">Swimming:</label></th><td><input id="id_swimming" name="swimming" type="checkbox" /></td></tr>
+    <tr><th><label for="id_gymnastics">Gymnastics:</label></th><td><input id="id_gymnastics" name="gymnastics" type="checkbox" /></td></tr>
+    <tr><th><label for="id_other">Other:</label></th><td><input id="id_other" maxlength="32" name="other" type="text" value="None" /></td></tr>
+    <input type="submit" value="Submit" style="color:black">
+  </form>
+
+  <div id="content-border"></div>
+
+
+  <div id="iSport360-closing">
+    <h1>Sports Done Right</h1>
+    <h3>Follow us</h3>
+    <h6>Privacy Policy</h6>
+  </div>
+
+</body>
